@@ -3,9 +3,9 @@ require './lib/intro_to_simple_array_manipulations.rb'
 
 describe "using_push" do 
   it "takes in two arguments, an array and a string and adds that string to the end of the array using the push method" do 
-    colors_in_the_rainbow = ["red", "orange", "yellow", "green", "blue", "indigo"]
-    next_color = "violet"
-    updated_array = using_push(colors_in_the_rainbow, next_color)
+    xyz = ["red", "orange", "yellow", "green", "blue", "indigo"]
+    next_color = "purple"
+    updated_array = using_push(xyz, next_color)
     expect(updated_array.last).to eq(next_color)
     end
 end
@@ -34,12 +34,10 @@ describe "using_pop" do
   it "takes in argument of an array and uses the pop method to remove the last element from the array and return that element" do 
     expect(@deleted_string).to eq("Antarctica")
   end
-
   it "decreases the length of the array by 1" do 
     expect(@continents.size).to eq(6)
   end
 end
-
 describe "pop_with_args" do
   before(:each) do 
     @dog_breeds = ["Great Dane", "Golden Retriever", "Chihuahua", "Shiba Inu"]
@@ -48,12 +46,10 @@ describe "pop_with_args" do
   it "takes in an argument of an array and uses the pop method with an argument of 2 to remove the last two array items and return them" do 
     expect(@small_dogs).to eq(["Chihuahua", "Shiba Inu"])
   end 
-
   it "decreases the length of the array by 2" do
     expect(@dog_breeds.size).to eq(2)
   end
 end
-
 describe "using_shift" do 
   before(:each) do 
     @my_favorite_cities = ["Lagos", "Cape Town", "Nairobi", "San Francisco", "Gaborone", "New York", "Berlin", "London"]
